@@ -1,4 +1,38 @@
 .container {
-  background-color: var(--tertiary);
-  max-width: min-content;
+  position: relative;
+}
+
+.form {
+  background-color: var(--tertiary2);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  padding: 2rem;
+  border-radius: 0.5rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.field {
+  display: grid;
+  font-size: 1.2rem;
+  text-align: left;
+  row-gap: 0.5rem;
+}
+
+.field input {
+  padding: 0.5rem 0.8rem 0.5rem 0.8rem;
+  border: none;
+  border-radius: 3px;
+}
+
+.field input:focus {
+  outline: none;
+}
+
+.login,
+.signup {
+  display: grid;
+  gap: 0.5rem;
 }

@@ -36,7 +36,7 @@ const Authenticate = () => {
           {loginView ? (
             <div className={styles.login}>
               <h2>Login</h2>
-              <div>
+              <div className={styles.field}>
                 <label>Username</label>
                 <input
                   onChange={handleFormChange}
@@ -44,7 +44,7 @@ const Authenticate = () => {
                   type="text"
                 ></input>
               </div>
-              <div>
+              <div className={styles.field}>
                 <label>Password</label>
                 <input
                   onChange={handleFormChange}
@@ -56,7 +56,7 @@ const Authenticate = () => {
           ) : (
             <div className={styles.signup}>
               <h2>Signup</h2>
-              <div>
+              <div className={styles.field}>
                 <label>Name</label>
                 <input
                   onChange={handleFormChange}
@@ -64,7 +64,7 @@ const Authenticate = () => {
                   type="text"
                 ></input>
               </div>
-              <div>
+              <div className={styles.field}>
                 <label>Email</label>
                 <input
                   onChange={handleFormChange}
@@ -72,7 +72,7 @@ const Authenticate = () => {
                   type="email"
                 ></input>
               </div>
-              <div>
+              <div className={styles.field}>
                 <label>Password</label>
                 <input
                   onChange={handleFormChange}
@@ -80,7 +80,7 @@ const Authenticate = () => {
                   type="password"
                 ></input>
               </div>
-              <div>
+              <div className={styles.field}>
                 <label>Year of birth</label>
                 <input
                   onChange={handleFormChange}
