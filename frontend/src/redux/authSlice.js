@@ -33,11 +33,9 @@ const authSlice = createSlice({
     login: (state, action) => {
       const user = state.users.find(
         (user) =>
-          user.name === action.payload.username &&
+          user.name === action.payload.name &&
           user.password === action.payload.password
       );
-
-      console.log(action.payload);
 
       if (user) {
         state.isAuthenticated = true;
