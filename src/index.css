@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --primary: #f71735; /*Title*/
+  --primary2: #032138; /*Navigation, Main Heading*/
+  --secondary: #999999; /*Subheading, Highlight text, Normal text, */
+  --secondary2: #999999; /*Silent text*/
+  --tertiary: #cccccc; /*Placeholders*/
+  --tertiary2: #dddddd; /*borders*/
+  --alert: #ca3131;
+  --success: #0eaa3d;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%; /*1rem = 10px*/
+  scroll-behavior: smooth;
+}
+
+body {
+  box-sizing: border-box;
+  position: relative;
+  font-family: "Montserrat", sans-serif;
+  /* font-family: 'Poppins', sans-serif; */
+  color: var(--primary2);
+  background-color: #ffffff;
+}
