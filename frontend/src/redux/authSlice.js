@@ -37,6 +37,8 @@ const authSlice = createSlice({
           user.password === action.payload.password
       );
 
+      console.log(action.payload);
+
       if (user) {
         state.isAuthenticated = true;
         state.user = user;
