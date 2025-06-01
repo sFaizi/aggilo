@@ -1,9 +1,7 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import styles from "./Nav.module.css"; // Make sure you create this file
 
-interface Props {}
-
-const Nav: React.FC<Props> = (props) => {
+const Nav = (props) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen((prev) => !prev);

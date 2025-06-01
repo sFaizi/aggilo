@@ -2,9 +2,7 @@ import React from "react";
 import styles from "./Header.module.css";
 import Nav from "../features/Nav";
 
-interface Props {}
-
-const Header: React.FC<Props> = (props) => {
+const Header = (props) => {
   return (
     <div className={styles.container}>
       <div></div>
