@@ -1,9 +1,8 @@
 import { useState } from "react";
 import styles from "./Nav.module.css"; // Make sure you create this file
 
-const Nav = (props) => {
+const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
-
   const toggle = () => setIsOpen((prev) => !prev);
 
   return (

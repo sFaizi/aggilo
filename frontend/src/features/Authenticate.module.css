@@ -42,3 +42,8 @@
   font-size: 1.5rem;
   font-weight: 500;
 }
+
+.small {
+  font-size: 1.3rem;
+  cursor: pointer;
+}

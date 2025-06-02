@@ -93,9 +93,17 @@ const Authenticate = () => {
 
           <button type="submit">{loginView ? "Login" : "Signup"}</button>
           {auth.error && <p>{auth.error}</p>}
-          <p onClick={handleView}>{loginView ? "or signup" : "or login"}</p>
+          <p className={styles.small} onClick={handleView}>
+            {loginView ? "or signup" : "or login"}
+          </p>
         </form>
       )}
+      <p style={{ padding: "10rem 5rem", lineHeight: "4" }}>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel voluptates,
+        quod doloremque molestiae ducimus reiciendis a quidem ipsa laboriosam
+        corporis molestias dolorum harum, non sed ratione dolor iste, officiis
+        nostrum?
+      </p>
     </div>
   );
 };
