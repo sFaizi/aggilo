@@ -1,17 +1,13 @@
 .container {
-  position: relative;
 }
 
 .form {
-  background-color: var(--tertiary2);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, 50%);
   padding: 2rem;
   border-radius: 0.5rem;
   display: grid;
   gap: 1rem;
+  box-shadow: 0px 0px 10px var(--tertiary);
+  margin: 1rem;
 }
 
 .field {
@@ -22,8 +18,8 @@
 }
 
 .field input {
-  padding: 0.5rem 0.8rem 0.5rem 0.8rem;
-  border: none;
+  padding: 0.8rem;
+  border: 1px solid var(--tertiary);
   border-radius: 3px;
 }
 
@@ -35,4 +31,14 @@
 .signup {
   display: grid;
   gap: 0.5rem;
+}
+
+.form button {
+  background-color: var(--primary);
+  border: none;
+  color: var(--tertiary2);
+  padding: 0.8rem;
+  border-radius: 3px;
+  font-size: 1.5rem;
+  font-weight: 500;
 }

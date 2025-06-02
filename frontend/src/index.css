@@ -9,6 +9,9 @@
   --tertiary2: #dddddd; /*borders*/
   --alert: #ca3131;
   --success: #0eaa3d;
+
+  /* mobile width */
+  --mobile: 430px;
 }
 
 *,
@@ -29,5 +32,6 @@ body {
   font-family: "Montserrat", sans-serif;
   /* font-family: 'Poppins', sans-serif; */
   color: var(--primary2);
-  background-color: #ffffff;
+  width: var(--mobile);
+  margin: 0 auto;
 }
