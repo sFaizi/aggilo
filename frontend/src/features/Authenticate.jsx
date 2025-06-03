@@ -13,6 +13,7 @@ const Authenticate = () => {
   });
   const dispatch = useDispatch();
   const auth = useSelector((state) => state.auth);
+  console.log(auth);
 
   const handleView = () => setLoginView((prev) => !prev);
   const handleFormChange = (e) =>
