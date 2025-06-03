@@ -85,7 +85,7 @@ const Authenticate = () => {
                 <label>Year of birth</label>
                 <input
                   onChange={handleFormChange}
-                  name="birtYear"
+                  name="birthYear"
                   type="date"
                 ></input>
               </div>
