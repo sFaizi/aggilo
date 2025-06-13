@@ -1,9 +1,9 @@
 import { useState } from "react";
 import styles from "./Authenticate.module.css";
 import { useDispatch, useSelector } from "react-redux";
-import { login, signup, logout } from "../redux/authSlice";
+import { login, signup } from "../redux/authSlice";
 
-const Authenticate = () => {
+const Authenticate = (props) => {
   const [loginView, setLoginView] = useState(true);
   const [form, setForm] = useState({
     name: "",
@@ -13,7 +13,6 @@ const Authenticate = () => {
   });
   const dispatch = useDispatch();
   const auth = useSelector((state) => state.auth);
-  console.log(auth);
 
   const handleView = () => setLoginView((prev) => !prev);
   const handleFormChange = (e) =>
@@ -22,16 +21,10 @@ const Authenticate = () => {
     e.preventDefault();
     dispatch(loginView ? login(form) : signup(form));
   };
-  const handleLogout = () => dispatch(logout());
 
   return (
     <div className={styles.container}>
-      {auth.isAuthenticated && (
-        <div>
-          <h1>Welcome</h1>
-          <button onClick={handleLogout}>Logout</button>
-        </div>
-      )}
+      {auth.isAuthenticated && <div>{props.children}</div>}
       {!auth.isAuthenticated && (
         <form className={styles.form} onSubmit={handleSubmit}>
           {loginView ? (
@@ -99,12 +92,6 @@ const Authenticate = () => {
           </p>
         </form>
       )}
-      <p style={{ padding: "10rem 5rem", lineHeight: "4" }}>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel voluptates,
-        quod doloremque molestiae ducimus reiciendis a quidem ipsa laboriosam
-        corporis molestias dolorum harum, non sed ratione dolor iste, officiis
-        nostrum?
-      </p>
     </div>
   );
 };

@@ -1,4 +1,3 @@
-import styles from "./App.module.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./views/Home";
 import Header from "./views/Header";
@@ -6,7 +5,7 @@ import Footer from "./features/Footer";
 
 function App() {
   return (
-    <div className={styles.app}>
+    <div>
       <BrowserRouter>
         <Header />
         <Routes>

@@ -36,7 +36,7 @@ export const logout = createAsyncThunk("auth/logout", async () => {
 
 const initialState = {
   user: null,
-  isAuthenticated: false,
+  isAuthenticated: localStorage.getItem("token") ? true : false,
   loading: false,
   error: null,
 };
@@ -55,7 +55,7 @@ const authSlice = createSlice({
       .addCase(signup.fulfilled, (state, action) => {
         state.loading = false;
         state.user = action.payload.user;
-        state.isAuthenticated = true;
+        state.isAuthenticated = localStorage.getItem("token") ? true : false;
       })
       .addCase(signup.rejected, (state, action) => {
         state.loading = false;
@@ -72,7 +72,7 @@ const authSlice = createSlice({
       .addCase(login.fulfilled, (state, action) => {
         state.loading = false;
         state.user = action.payload.user;
-        state.isAuthenticated = true;
+        state.isAuthenticated = localStorage.getItem("token") ? true : false;
       })
       .addCase(login.rejected, (state, action) => {
         state.loading = false;

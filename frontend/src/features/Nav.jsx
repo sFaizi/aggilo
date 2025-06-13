@@ -1,9 +1,13 @@
 import { useState } from "react";
 import styles from "./Nav.module.css"; // Make sure you create this file
+import { useDispatch } from "react-redux";
+import { logout } from "../redux/authSlice";
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const dispatch = useDispatch();
   const toggle = () => setIsOpen((prev) => !prev);
+  const handleLogout = () => dispatch(logout());
 
   return (
     <div className={styles.container}>
@@ -21,6 +25,9 @@ const Nav = () => {
             <li className={styles.menu_opt}>Home</li>
             <li className={styles.menu_opt}>About</li>
             <li className={styles.menu_opt}>Contact</li>
+            <li className={styles.menu_opt} onClick={handleLogout}>
+              Logout
+            </li>
           </ul>
         </div>
       )}
